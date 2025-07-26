@@ -6,6 +6,7 @@ import "react-toastify/dist/ReactToastify.css";
 function App() {
   useEffect(() => {
     const appName = import.meta.env.VITE_PROJECT_NAME || "Mon App";
+    console.log("Nom du projet:", appName);
     document.title = appName;
   }, []);
 
