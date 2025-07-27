@@ -20,7 +20,7 @@ export const db = mysql.createPool({
   database: process.env.DB_NAME,
 });
 
-console.log(`🗄️ using database ${process.env.DB_NAME}`);
+console.log(`Using database ${process.env.DB_NAME}`);
 
 // Initialiser les tables
 await initDB();

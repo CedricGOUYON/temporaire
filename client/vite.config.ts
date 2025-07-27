@@ -10,9 +10,9 @@ export default defineConfig(({ mode }) => {
 ✅ CLIENT
 =========================
 `);
-  console.log(`📦 Projet     : ${rootFolderName}`);
-  console.log(`🔗 API        : ${env.VITE_API_URL}`);
-  console.log(`🔐 DOTENV     : Variables injectées depuis .env`);
+  console.log(`Projet     : ${rootFolderName}`);
+  console.log(`API        : ${env.VITE_API_URL}`);
+  console.log(`DOTENV     : Variables injectées depuis .env`);
 
   return {
     plugins: [react()],
