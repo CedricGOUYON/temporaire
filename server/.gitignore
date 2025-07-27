@@ -3,7 +3,7 @@ node_modules/
 
 # Environnement
 .env
-.env.*
+
 
 # Build TypeScript
 dist/
