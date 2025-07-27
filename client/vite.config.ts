@@ -4,8 +4,15 @@ import { defineConfig, loadEnv } from "vite";
 
 export default defineConfig(({ mode }) => {
   const env = loadEnv(mode, process.cwd());
-
   const rootFolderName = path.basename(path.dirname(process.cwd()));
+  console.log(`
+=========================
+✅ CLIENT
+=========================
+`);
+  console.log(`📦 Projet     : ${rootFolderName}`);
+  console.log(`🔗 API        : ${env.VITE_API_URL}`);
+  console.log(`🔐 DOTENV     : Variables injectées depuis .env`);
 
   return {
     plugins: [react()],

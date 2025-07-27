@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import { RouterProvider } from "react-router";
 import "./global.css";
-import router from "../src/Router";
+import router from "../src/router";
 
 const rootElement = document.getElementById("root");
 
