@@ -8,7 +8,8 @@
     "initdb": "ts-node --loader ts-node/esm services/db/initdb.ts"
   },
   "dependencies": {
-    "argon2": "^0.32.0",
+    "app_poulet": "file:..",
+    "argon2": "^0.31.2",
     "cookie-parser": "^1.4.6",
     "cors": "^2.8.5",
     "dotenv": "^10.0.0",
