@@ -5,7 +5,8 @@
   "type": "module",
   "scripts": {
     "setup": "npm install && npm install --prefix client && npm install --prefix server",
-    "dev": "npm run setup && concurrently -c green,yellow -t \"HH:mm:ss\" -p \"{name} {time}\" \"npm run dev --prefix server\" \"npm run dev --prefix client\"",
+    "dev": "concurrently -c green,yellow -t \"HH:mm:ss\" -p \"[{name}] {time}\" \"npm run dev --prefix server\" \"npm run dev --prefix client\"",
+    "start": "npm run setup && npm run dev",
     "dev:client": "npm run dev --prefix client -- --host",
     "dev:server": "tsx src/index.ts"
   },
