@@ -1,11 +1,12 @@
 {
-  "name": "fullstack-starter-kit",
+  "name": "app_poulet",
   "version": "1.0.0",
   "private": true,
+  "type": "module",
   "scripts": {
-    "dev": "concurrently -c green,yellow -t \"HH:mm:ss\" -p \"{name} {time}\" \"npm run dev:client\" \"npm run dev:server\"",
+    "dev": "concurrently -c green,yellow -t \"HH:mm:ss\" -p \"{name} {time}\" \"npm run dev --prefix server\" \"npm run dev --prefix client\"",
     "dev:client": "npm run dev --prefix client -- --host",
-    "dev:server": "npm run dev --prefix server"
+    "dev:server": "tsx src/index.ts"
   },
   "devDependencies": {
     "@biomejs/biome": "^2.1.1",

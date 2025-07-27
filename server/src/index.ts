@@ -1,11 +1,9 @@
 import cors from "cors";
-import dotenv from "dotenv";
+import "dotenv/config";
 import express from "express";
 import { db } from "../services/db";
-import { initDB } from "../services/db/initdb";
+import { initDB } from "../services/db/initDB";
 import routes from "./routes/api";
-
-dotenv.config();
 
 const app = express();
 const PORT = process.env.APP_PORT || 3310;
@@ -24,6 +22,7 @@ db.getConnection()
     console.log(`Connexion réussie à la base ${process.env.DB_NAME}`);
     try {
       await initDB();
+      console.log("✅ Base de données initialisée avec toutes les tables");
     } catch (initErr) {
       console.error("Erreur lors de l'initialisation :", initErr);
     }
