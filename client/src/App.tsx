@@ -1,11 +1,11 @@
 import { useEffect } from "react";
-import { Outlet } from "react-router";
+import { Outlet } from "react-router-dom"; // ✅ plus spécifique que "react-router"
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 function App() {
   useEffect(() => {
-    const appName = import.meta.env.VITE_PROJECT_NAME;
+    const appName = import.meta.env.VITE_PROJECT_NAME || "Mon Projet Temporaire";
     console.log("Nom du projet:", appName);
     document.title = appName;
   }, []);
