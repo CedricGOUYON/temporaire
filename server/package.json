@@ -7,6 +7,7 @@
     "initdb": "ts-node --loader ts-node/esm services/db/initdb.ts"
   },
   "dependencies": {
+    "app_poulet": "file:..",
     "argon2": "^0.43.1",
     "cookie-parser": "^1.4.7",
     "cors": "^2.8.5",
