@@ -1,11 +1,78 @@
+/* RESET CSS LÉGER ET MODERNE */
 * {
 	box-sizing: border-box;
-}
-body {
 	margin: 0;
-	background-color: var(--primary-color);
+	padding: 0;
 }
+
+html,
+body {
+	height: 100%;
+	font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+	background-color: var(--primary-color);
+	color: var(--secondary-color);
+	line-height: 1.6;
+	scroll-behavior: smooth;
+}
+
 :root {
 	--primary-color: #008080;
+	--primary-hover-color: #006666;
 	--secondary-color: #ffffff;
+	--accent-color: #00cccc;
+	--text-color-dark: #1c1c1c;
+	--spacing: 16px;
+	--radius: 8px;
+}
+
+/* LIENS GLOBAUX */
+a {
+	color: var(--secondary-color);
+	text-decoration: none;
+	transition: all 0.3s ease;
+}
+
+a:hover {
+	color: var(--secondary-color);
+	background-color: var(--primary-hover-color);
+	padding: 4px 8px;
+	border-radius: var(--radius);
+}
+
+/* LISTES */
+ul {
+	list-style: none;
+	padding-left: 0;
+}
+
+/* TITRES */
+h1,
+h2,
+h3,
+h4,
+h5 {
+	font-weight: bold;
+	margin-bottom: 0.5em;
+}
+
+/* BOUTONS (STYLE PAR DÉFAUT) */
+button {
+	background-color: var(--accent-color);
+	color: var(--secondary-color);
+	border: none;
+	padding: 10px 20px;
+	border-radius: var(--radius);
+	cursor: pointer;
+	transition: background-color 0.3s ease;
+}
+
+button:hover {
+	background-color: var(--primary-hover-color);
+}
+
+/* CONTENEUR GLOBAL OPTIONNEL */
+.container {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: var(--spacing);
 }
