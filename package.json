@@ -5,8 +5,10 @@
   "type": "module",
   "scripts": {
     "setup": "npm install && npm install --prefix client && npm install --prefix server && node ./setup/copyEnv.cjs",
-    "dev": "concurrently --names \"server,client\" -c green,yellow -t \"HH:mm:ss\" -p \"{name} {time}\" \"npm run dev --prefix server\" \"npm run dev --prefix client\"",
+    "dev": "concurrently --names \"server,client,report\" -c green,yellow,cyan -t \"HH:mm:ss\" -p \"{name} {time}\" \"npm run dev --prefix server\" \"npm run dev --prefix client\" \"npm run report:silent\"",
     "start": "npm run setup && npm run dev",
+    "report": "node setup/constants-report.js",
+    "report:silent": "node setup/constants-report.js > NUL 2>&1",
     "dev:client": "npm run dev --prefix client -- --host",
     "dev:server": "tsx src/index.ts"
   },
